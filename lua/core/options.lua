@@ -31,6 +31,7 @@ vim.opt.smartcase = true
 ----appreance----
 vim.opt.termguicolors = true
 vim.signcolumn = "yes"
+vim.opt.scrolloff = 5
 
 -- See https://github.com/folke/tokyonight.nvim
 vim.cmd[[colorscheme tokyonight-night]] -- theme(reuaire plugin folke/tokyonight.nvim)
