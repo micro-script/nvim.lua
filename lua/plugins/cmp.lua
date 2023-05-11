@@ -63,11 +63,14 @@
   -- Set up lspconfig.
   local capabilities = require('cmp_nvim_lsp').default_capabilities()
   -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-  require('lspconfig')['clangd'].setup {
+  require('lspconfig')["clangd"].setup {
     capabilities = capabilities
   }
 
-  require('lspconfig')['gopls'].setup {
+  require('lspconfig')["cmake"].setup {
     capabilities = capabilities
   }
 
+  require('lspconfig')["gopls"].setup {
+    capabilities = capabilities
+  }
