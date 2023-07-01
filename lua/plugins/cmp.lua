@@ -67,10 +67,10 @@
     capabilities = capabilities
   }
 
-  require('lspconfig')["cmake"].setup {
-    capabilities = capabilities
-  }
+  -- require('lspconfig')["cmake"].setup {
+  --   capabilities = capabilities
+  -- }
 
-  require('lspconfig')["gopls"].setup {
-    capabilities = capabilities
-  }
+  -- require('lspconfig')["gopls"].setup {
+  --   capabilities = capabilities
+  -- }
