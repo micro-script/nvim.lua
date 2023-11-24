@@ -9,5 +9,6 @@ require("mason").setup({
 }) 
 
 require("mason-lspconfig").setup {
-    ensure_installed = { "clangd", "gopls", "cmake" }
+    -- ensure_installed = { "clangd", "gopls", "cmake", "python"}
+    ensure_installed = { "clangd", "cmake", "pyright"}
 }

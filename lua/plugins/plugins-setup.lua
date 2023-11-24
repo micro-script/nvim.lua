@@ -49,13 +49,16 @@ return require('packer').startup(function(use)
   use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}-- top buffer line
   use "lewis6991/gitsigns.nvim" -- git tips in left side 
 
-  -- Install Markdown Preview.
-  --
   use({
       "iamcco/markdown-preview.nvim",
       run = function() vim.fn["mkdp#util#install"]() end,
   })
-  --use({"iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, }) 
+  
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.4',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
+  
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
