@@ -9,13 +9,26 @@ vim.g.loaded_netrwPlugin = 1
 -- vim.opt.termguicolors = true
 
 -- empty setup using defaults
-require("nvim-tree").setup()
+-- require("nvim-tree").setup()
 
 -- OR setup with some options
 require("nvim-tree").setup({
   sort_by = "case_sensitive",
   renderer = {
     group_empty = true,
+    -- icons = {
+    --   glyphs = {
+    --     git = {
+    --       unstaged = "",
+    --       staged = "",
+    --       unmerged = "",
+    --       renamed = "",
+    --       untracked = "",
+    --       deleted = "",
+    --       ignored = "",
+    --     }
+    --   },
+    -- },
   },
   filters = {
     dotfiles = true,

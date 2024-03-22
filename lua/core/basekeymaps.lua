@@ -11,7 +11,22 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 -- cancel highlight.
 vim.keymap.set("n", "<leader>nh",":nohl<CR>")
 
--- ----------- plugin mapping ------------
+-- windows mapping.
+---- create new window or delete window.
+vim.keymap.set("n", "<leader>wv", ":wincmd v<CR>")
+vim.keymap.set("n", "<leader>ws", ":wincmd s<CR>")
+vim.keymap.set("n", "<leader>wq", ":wincmd q<CR>")
+
+---- move to different window.
+vim.keymap.set("n", "<leader>wh", ":wincmd h<CR>")
+vim.keymap.set("n", "<leader>wj", ":wincmd j<CR>")
+vim.keymap.set("n", "<leader>wk", ":wincmd k<CR>")
+vim.keymap.set("n", "<leader>wl", ":wincmd l<CR>")
+
+---- resize window. 
+vim.keymap.set("n", "<leader>w=", ":wincmd +<CR>")
+vim.keymap.set("n", "<leader>w-", ":wincmd -<CR>")
+vim.keymap.set("n", "<leader>w;", ":wincmd =<CR>")
 
 --nvim.tree explorer
 vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
@@ -34,3 +49,6 @@ vim.keymap.set('n', '<leader>tg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>tb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>th', builtin.help_tags, {})
 vim.keymap.set('n', '<leader>tq', builtin.treesitter, {})
+
+--nvim diagnostic mapping
+vim.keymap.set('n', '<leader>dl', "<Cmd>lua vim.diagnostic.open_float(0,{scope=\"l\"})<CR>")
